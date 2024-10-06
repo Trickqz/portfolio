@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
@@ -37,7 +39,7 @@ CardImage.displayName = "CardImage"
 const CardGrid = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+>(({ ...props }) => (
   <div className="relative w-full h-full">
     <div className="absolute top-1/2 z-50 left-1/2 transform text-muted-foreground -translate-x-1/2 flex flex-row gap-1 items-center -translate-y-1/2 text-center">
       {React.Children.toArray(props.children)}
@@ -97,7 +99,7 @@ CardFooter.displayName = "CardFooter"
 const CardLink = React.forwardRef<
   HTMLAnchorElement,
   React.AnchorHTMLAttributes<HTMLAnchorElement>
->(({ className, ...props }, ref) => (
+>(({ }) => (
     <div className="flex items-center gap-2 group hover:text-primary2">
       <p className="text-muted-foreground text-xs">View Project</p> 
       <svg className="text-muted-foreground" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
