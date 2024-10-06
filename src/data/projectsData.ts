@@ -5,8 +5,9 @@ import inOrbitImage from '../assets/3.png';
 import goldPriceImage from '../assets/4.png';
 import scissorsImage from '../assets/5.png';
 import todoListImage from '../assets/6.png';
-import pomodoroImage from '../assets/7.png';
 import pyflaskTodoImage from '../assets/6.png';
+import pomodoroImage from '../assets/7.png';
+import tripplannerImage from '../assets/8.png';
 
 export interface Project {
   id: number;
@@ -81,5 +82,13 @@ export const projectsData: Project[] = [
     image: pyflaskTodoImage,
     technologies: ["python", "flask", "css"],
     link: "https://github.com/Trickqz/to-do-list-pyflask"
+  },
+  {
+    id: 8,
+    title: "Trip-planner",
+    description: "project made with, nextjs, prisma, typescript, next-auth, shacdnui and more",
+    image: tripplannerImage,
+    technologies: ["next", "prisma", "typescript"],
+    link: "https://github.com/Trickqz/trip-planner"
   }
 ];
