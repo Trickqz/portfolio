@@ -1,101 +1,86 @@
+'use client'
+
 import Image from "next/image";
+import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript, SiPrisma, SiJavascript, SiTailwindcss, SiDocker, SiNextdotjs, SiPostgresql, SiHtml5, SiCss3 } from 'react-icons/si'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+import My from "@/assets/euuu.jpg"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <TooltipProvider>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mt-20 xl:mt-60 flex flex-col items-center justify-center px-4 xl:px-0"
+      >
+        <div className="flex flex-col xl:flex-row justify-center items-center">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mb-8 xl:mb-0 xl:order-last"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Image className="w-[250px] h-[250px] xl:w-[400px] xl:h-[400px] xl:ml-20 object-cover border-4 rounded-full" width={400} height={400} src={My} alt="minha foto" />
+          </motion.div>
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-center xl:text-left p-4 xl:p-8 max-w-3xl"
           >
-            Read our docs
-          </a>
+            <h1 className="text-3xl xl:text-5xl text-center xl:text-start font-jura font-bold mb-3">
+              Hello, my name is Patrick
+            </h1>
+            <p className="text-base xl:text-lg text-center xl:text-start text-muted-foreground">
+              During these 5 years as a full-stack, my role has always gone beyond my knowledge, always seeking to learn to apply in my codes and always looking for projects to grow.
+            </p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="flex flex-wrap xl:flex-nowrap justify-center xl:justify-start gap-3 xl:gap-5 mt-6"
+            >
+              <SkillIcon Icon={SiNextdotjs} name="Next.js" />
+              <SkillIcon Icon={SiTailwindcss} name="Tailwind CSS" />
+              <SkillIcon Icon={SiPrisma} name="Prisma" />
+              <SkillIcon Icon={SiPostgresql} name="PostgreSQL" />
+              <SkillIcon Icon={SiDocker} name="Docker" />
+              <SkillIcon Icon={SiTypescript} name="TypeScript" />
+              <SkillIcon Icon={FaNodeJs} name="Node.js" />
+              <SkillIcon Icon={FaReact} name="React" />
+              <SkillIcon Icon={SiHtml5} name="HTML5" />
+              <SkillIcon Icon={SiJavascript} name="JavaScript" />
+              <SkillIcon Icon={SiCss3} name="CSS3" />
+            </motion.div>
+          </motion.div>
+          <svg className="absolute hidden xl:block right-0 -z-30" width="885" viewBox="0 0 685 719" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M156 239.5C253 78.5 573.499 114 684.999 0V718.5C135.268 718.5 23.5 650 8.92667 634.616C-5.64667 619.231 -5.42806 534.5 37.4999 455C131.431 281.046 80.8887 364.169 156 239.5Z" fill="#3ECF8E" />
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </motion.div>
+    </TooltipProvider>
+  );
+}
+
+function SkillIcon({ Icon, name }: { Icon: React.ElementType, name: string }) {
+  return (
+    <Tooltip delayDuration={0}>
+      <TooltipTrigger>
+        <div className="flex flex-col items-center">
+          <Icon className="text-2xl text-buttonborder" />
+        </div>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{name}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }
