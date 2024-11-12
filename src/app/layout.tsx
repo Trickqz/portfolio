@@ -24,8 +24,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Patrick Dev",
-  description: "Descrição do seu site",
+  title: "Patrick Tavares",
+  description: "Meu portfólio de desenvolvimento web",
   icons: {
     icon: '/favicoin.ico',
   },
