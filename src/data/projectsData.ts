@@ -39,7 +39,7 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: "barbershop-scheduling",
-    description: "Sistema de agendamento para barbearias, desenvolvido em Go com Gin e GORM. Utiliza PostgreSQL para o banco de dados e JWT para autenticação. Permite registro de barbeiros, agendamento de atendiment…",
+    description: "Sistema de agendamento para barbearias, desenvolvido em Go com Gin e GORM. Utiliza PostgreSQL para o banco de dados e JWT para autenticação.",
     image: backend,
     technologies: ["golang", "postgresql"],
     link: "https://github.com/Trickqz/barbershop-scheduling"
