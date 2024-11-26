@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card"
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill, RiHtml5Fill } from "react-icons/ri"
 import { SiTypescript, SiTailwindcss, SiPrisma, SiPostgresql, SiDocker, SiJavascript, SiCss3, SiPython, SiFlask } from "react-icons/si"
+import { FaGolang } from "react-icons/fa6";
 import { motion } from "framer-motion"
 
 const technologyIcons = {
@@ -32,6 +33,7 @@ const technologyIcons = {
     css: SiCss3,
     python: SiPython,
     flask: SiFlask,
+    golang: FaGolang,
 }
 
 export default function Project() {
