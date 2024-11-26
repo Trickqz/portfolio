@@ -8,6 +8,7 @@ import todoListImage from '../assets/6.png';
 import pyflaskTodoImage from '../assets/6.png';
 import pomodoroImage from '../assets/7.png';
 import tripplannerImage from '../assets/8.png';
+import backend from '../assets/backend.png';
 
 export interface Project {
   id: number;
@@ -23,7 +24,7 @@ export const projectsData: Project[] = [
     id: 1,
     title: "User-auth-token",
     description: "Template Go com autenticação JWT, rotas privadas e integração com PostgreSQL usando o Gin e Gorm.",
-    image: ecommerceImage,
+    image: backend,
     technologies: ["golang", "docker", "postgresql"],
     link: "https://github.com/Trickqz/user-auth-token"
   },
@@ -31,7 +32,7 @@ export const projectsData: Project[] = [
     id: 2,
     title: "Gin-api-rest",
     description: "CRUD em golang bem simples, utilizando gorm, postgres e gin",
-    image: ecommerceImage,
+    image: backend,
     technologies: ["golang", "docker", "postgresql"],
     link: "https://github.com/Trickqz/gin-api-rest"
   },
@@ -39,7 +40,7 @@ export const projectsData: Project[] = [
     id: 3,
     title: "barbershop-scheduling",
     description: "Sistema de agendamento para barbearias, desenvolvido em Go com Gin e GORM. Utiliza PostgreSQL para o banco de dados e JWT para autenticação. Permite registro de barbeiros, agendamento de atendiment…",
-    image: ecommerceImage,
+    image: backend,
     technologies: ["golang", "postgresql"],
     link: "https://github.com/Trickqz/barbershop-scheduling"
   },
@@ -47,7 +48,7 @@ export const projectsData: Project[] = [
     id: 4,
     title: "course-management-golang",
     description: "API RESTful para gerenciamento de cursos, usuários e progresso. Desenvolvida em Go com JWT, GORM, Gorilla Mux e Bcrypt.",
-    image: ecommerceImage,
+    image: backend,
     technologies: ["golang", "postgresql"],
     link: "https://github.com/Trickqz/course-management-golang"
   },
